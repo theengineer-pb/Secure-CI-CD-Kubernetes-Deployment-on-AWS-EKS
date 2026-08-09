@@ -124,7 +124,7 @@ jobs:
           version: latest
           cache: true
 
-      - name: Verify Trivy installation
+      - name: Verify trivy installation
         run: |
           trivy --version
           which trivy
