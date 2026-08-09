@@ -411,7 +411,7 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           load: true
-          push: true
+          push: false
           tags: | 
             prathdy12/nodejs-app:${{ github.sha }}
             prathdy12/nodejs-app:latest 
