@@ -376,7 +376,7 @@ jobs:
         working-directory: client
 
     steps:
-      - name: Checkout source code
+      - name: Checkout Source Code
         uses: actions/checkout@v4
 
       - name: Setup Node.js
