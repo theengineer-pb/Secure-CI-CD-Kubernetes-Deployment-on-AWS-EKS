@@ -98,7 +98,7 @@ jobs:
       - name: Generate kubeconfig for EKS
         run: aws eks update-kubeconfig --region "${AWS_REGION}" --name "${EKS_CLUSTER_NAME}"
 
-      - name: Verify identity
+      - name: Verify Identity
         run: |
           aws sts get-caller-identity
           kubectl config current-context
