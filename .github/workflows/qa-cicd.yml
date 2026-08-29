@@ -7,7 +7,6 @@ on:
       - client/**
       - server/**
       - .github/workflows/qa-cicd.yml
-      
 env:
   AWS_REGION: 'ap-south-1' 
   
