@@ -7,9 +7,6 @@ on:
       - client/**
       - server/**
       - .github/workflows/qa-cicd.yml
-env:
-  AWS_REGION: 'ap-south-1' 
-  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: "true"
   
 permissions:
   contents: write
@@ -521,17 +518,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           ref: qa   # ← explicitly pull latest qa, not the trigger SHA
-
-      - name: Debug GitHub OIDC claims
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const token = await core.getIDToken('sts.amazonaws.com')
-            const payload = JSON.parse(
-            Buffer.from(token.split('.')[1], 'base64').toString()
-            )
-            console.log("sub:", payload.sub)
-            console.log("aud:", payload.aud) 
      
       - name: Configure AWS credentials from GitHub OIDC
         uses: aws-actions/configure-aws-credentials@v4
