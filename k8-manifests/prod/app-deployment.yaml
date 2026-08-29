@@ -17,7 +17,7 @@ spec:
       - name: regcred
       containers:
       - name: nodejs-app
-        image: prathdy12/nodejs-app:prod-a0dacdaa6883b9507567ff9076669e8144b059d6
+        image: prathdy12/nodejs-app:prod-7e82a4b56542250f116f4430831ba7fcc746bb64
         ports:
         - containerPort: 5000
         env:
