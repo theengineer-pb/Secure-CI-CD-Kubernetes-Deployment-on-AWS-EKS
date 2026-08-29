@@ -80,7 +80,7 @@ jobs:
       K8S_NAMESPACE: prod
 
     steps:
-      - name: Checkout latest main
+      - name: Checkout Latest Main
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
